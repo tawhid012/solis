@@ -3,6 +3,7 @@ import { ArrowRight, AlertCircle } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
 import { FinalCta } from '../components/FinalCta';
 import { TrustStrip } from '../components/TrustStrip';
+import { getAssetUrl } from '../utils/assets';
 
 export function ClinicalSupportPage({ navigate }) {
   const handleSpeakWithTeam = (e) => {
@@ -34,7 +35,7 @@ export function ClinicalSupportPage({ navigate }) {
           <div className="clinical-split">
             <div className="clinical-photo-frame">
               <img
-                src="/images/pharmacist_consultation.jpg"
+                src={getAssetUrl('images/pharmacist_consultation.jpg')}
                 alt="Registered clinical pharmacist counselling an adult patient"
                 width="640"
                 height="720"

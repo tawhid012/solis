@@ -10,13 +10,25 @@ import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { TermsPage } from './pages/TermsPage';
 import { DispensingPolicyPage } from './pages/DispensingPolicyPage';
 import { siteConfig } from './data/siteConfig';
+import { BASE_PATH } from './utils/assets';
+
+function normalizePath(rawPath) {
+  let path = rawPath || '/';
+  if (BASE_PATH && path.startsWith(BASE_PATH)) {
+    path = path.slice(BASE_PATH.length);
+  }
+  if (path.length > 1 && path.endsWith('/')) {
+    path = path.slice(0, -1);
+  }
+  return path || '/';
+}
 
 export default function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname || '/');
+  const [currentPath, setCurrentPath] = useState(() => normalizePath(window.location.pathname));
 
   useEffect(() => {
     const handlePopState = () => {
-      setCurrentPath(window.location.pathname || '/');
+      setCurrentPath(normalizePath(window.location.pathname));
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
@@ -25,8 +37,9 @@ export default function App() {
   const navigate = (href) => {
     if (href.startsWith('/#')) {
       const targetId = href.replace('/#', '');
+      const rootUrl = BASE_PATH ? `${BASE_PATH}/` : '/';
       if (currentPath !== '/') {
-        window.history.pushState(null, '', '/');
+        window.history.pushState(null, '', rootUrl);
         setCurrentPath('/');
         setTimeout(() => {
           const el = document.getElementById(targetId);
@@ -43,13 +56,15 @@ export default function App() {
       return;
     }
 
-    if (href === currentPath) {
+    const target = normalizePath(href);
+    if (target === currentPath) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
       return;
     }
 
-    window.history.pushState(null, '', href);
-    setCurrentPath(href);
+    const fullUrl = BASE_PATH ? `${BASE_PATH}${target}` : target;
+    window.history.pushState(null, '', fullUrl);
+    setCurrentPath(target);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 

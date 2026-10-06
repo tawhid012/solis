@@ -6,6 +6,8 @@
  * is scattered throughout the application.
  */
 
+import { getAssetUrl } from '../utils/assets';
+
 export const siteConfig = {
   brand: {
     name: "Solis Healthcare & Meds",
@@ -16,9 +18,9 @@ export const siteConfig = {
     description: "A trusted healthcare destination for affordable generic medicines, surgical supplies, injectables, life-saving drugs, cosmetics, and OTC products, backed by qualified registered pharmacists.",
     establishedBadge: "Registered Pharmacy Care",
     logos: {
-      horizontal: "/Horizontal.png",
-      monochrome: "/Monochrome.png",
-      icon: "/Icon.png",
+      horizontal: getAssetUrl("Horizontal.png"),
+      monochrome: getAssetUrl("Monochrome.png"),
+      icon: getAssetUrl("Icon.png"),
     },
   },
 

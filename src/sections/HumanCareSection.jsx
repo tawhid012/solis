@@ -1,4 +1,5 @@
 import React from 'react';
+import { getAssetUrl } from '../utils/assets';
 
 export function HumanCareSection() {
   return (
@@ -20,7 +21,7 @@ export function HumanCareSection() {
           {/* Right: Strong Editorial Documentary Photograph */}
           <div className="human-care-photo">
             <img
-              src="/images/human_care_moment.jpg"
+              src={getAssetUrl('images/human_care_moment.jpg')}
               alt="Registered pharmacist handing a medicine package with warm care to an elderly patient"
               width="640"
               height="480"

@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export function HeroSection({ navigate }) {
   const handleVisitClick = (e) => {
@@ -51,7 +52,7 @@ export function HeroSection({ navigate }) {
         {/* Large Editorial Pharmacy Campaign Photograph */}
         <div className="hero-editorial-photo">
           <img
-            src="/images/hero_pharmacy.jpg"
+            src={getAssetUrl('images/hero_pharmacy.jpg')}
             alt="Modern quiet-luxury interior of Solis Healthcare & Meds pharmacy"
             width="1280"
             height="720"

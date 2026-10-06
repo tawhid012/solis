@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { getAssetUrl } from '../utils/assets';
 
 export function AboutSection({ navigate }) {
   const handleLearnMore = (e) => {
@@ -43,7 +44,7 @@ export function AboutSection({ navigate }) {
         <div className="about-editorial-visual">
           <div className="about-visual-frame">
             <img
-              src="/images/healthcare_still_life.jpg"
+              src={getAssetUrl('images/healthcare_still_life.jpg')}
               alt="Curated medicines, amber apothecary bottles, and healthcare essentials"
               width="680"
               height="480"

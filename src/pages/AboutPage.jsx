@@ -2,6 +2,7 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { FinalCta } from '../components/FinalCta';
 import { TrustStrip } from '../components/TrustStrip';
+import { getAssetUrl } from '../utils/assets';
 
 export function AboutPage({ navigate }) {
   return (
@@ -47,7 +48,7 @@ export function AboutPage({ navigate }) {
             <div>
               <div className="hero-editorial-photo">
                 <img
-                  src="/images/hero_pharmacy.jpg"
+                  src={getAssetUrl('images/hero_pharmacy.jpg')}
                   alt="Modern European apothecary interior of Solis Healthcare"
                   width="720"
                   height="480"

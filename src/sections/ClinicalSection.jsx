@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
+import { getAssetUrl } from '../utils/assets';
 
 export function ClinicalSection({ navigate }) {
   const handleClinicalClick = (e) => {
@@ -20,7 +21,7 @@ export function ClinicalSection({ navigate }) {
           {/* Left Side: Large Authentic Healthcare Consultation Photo */}
           <div className="clinical-photo-frame">
             <img
-              src="/images/pharmacist_consultation.jpg"
+              src={getAssetUrl('images/pharmacist_consultation.jpg')}
               alt="Registered clinical pharmacist counselling an adult patient on medication usage"
               width="640"
               height="720"
