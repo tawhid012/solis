@@ -50,8 +50,8 @@ export function AboutPage({ navigate }) {
                 <img
                   src={getAssetUrl('images/hero_pharmacy.jpg')}
                   alt="Modern European apothecary interior of Solis Healthcare"
-                  width="720"
-                  height="480"
+                  width="976"
+                  height="1024"
                   loading="lazy"
                 />
               </div>

@@ -54,8 +54,8 @@ export function HeroSection({ navigate }) {
           <img
             src={getAssetUrl('images/hero_pharmacy.jpg')}
             alt="Modern quiet-luxury interior of Solis Healthcare & Meds pharmacy"
-            width="1280"
-            height="720"
+            width="976"
+            height="1024"
             loading="eager"
           />
         </div>
