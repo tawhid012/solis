@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { siteConfig } from '../data/siteConfig';
+import { InstagramIcon } from '../components/InstagramIcon';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -87,9 +88,17 @@ export function ContactSection() {
                     href={siteConfig.contact.socialMedia.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    style={{ color: 'var(--solis-navy-dark)', textDecoration: 'none' }}
+                    style={{
+                      color: 'var(--solis-navy-dark)',
+                      textDecoration: 'none',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.45rem',
+                    }}
+                    aria-label="Instagram profile @montelukastman"
                   >
-                    {siteConfig.contact.socialMedia.handle}
+                    <InstagramIcon size={16} style={{ color: 'var(--solis-teal)' }} />
+                    <span>{siteConfig.contact.socialMedia.handle}</span>
                   </a>
                 </div>
                 <div className="contact-detail-sub">Follow for clinical insights &amp; community updates</div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { siteConfig } from '../data/siteConfig';
+import { InstagramIcon } from './InstagramIcon';
 
 export function Footer({ navigate }) {
   const handleNavClick = (href, e) => {
@@ -47,7 +48,9 @@ export function Footer({ navigate }) {
             <div className="footer-col-title">Pharmacy Visit</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', color: 'var(--text-inverse-muted)', fontSize: '0.925rem', lineHeight: '1.55' }}>
               <div>
-                <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.2rem' }}>Premises</strong>
+                <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.2rem' }}>
+                  Patient Counselling Address
+                </strong>
                 <a
                   href={siteConfig.contact.googleMapsUrl}
                   target="_blank"
@@ -56,6 +59,9 @@ export function Footer({ navigate }) {
                 >
                   {siteConfig.contact.address}, {siteConfig.contact.addressLine2}
                 </a>
+                <span style={{ display: 'block', fontSize: '0.8rem', color: '#8C9FA8', marginTop: '0.15rem' }}>
+                  In-person patient counselling &amp; consultation
+                </span>
               </div>
               <div>
                 <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.2rem' }}>Clinical Lead</strong>
@@ -73,9 +79,20 @@ export function Footer({ navigate }) {
                   href={siteConfig.contact.socialMedia.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  style={{ color: '#A5C4D4', textDecoration: 'none', fontSize: '0.85rem', marginTop: '0.25rem', display: 'inline-block' }}
+                  style={{
+                    color: '#A5C4D4',
+                    textDecoration: 'none',
+                    fontSize: '0.875rem',
+                    marginTop: '0.4rem',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.45rem',
+                    transition: 'color 150ms',
+                  }}
+                  aria-label="Instagram profile @montelukastman"
                 >
-                  {siteConfig.contact.socialMedia.handle} &rarr;
+                  <InstagramIcon size={15} />
+                  <span>{siteConfig.contact.socialMedia.handle}</span>
                 </a>
               </div>
             </div>
