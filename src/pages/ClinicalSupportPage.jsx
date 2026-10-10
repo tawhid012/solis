@@ -51,9 +51,21 @@ export function ClinicalSupportPage({ navigate }) {
               <p className="clinical-substatement">
                 Modern pharmacotherapy is complex. Patients frequently take multiple medications prescribed by different physicians, increasing the risk of adverse drug interactions and improper administration.
               </p>
-              <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>
+              <p style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem' }}>
                 At Solis, our registered clinical pharmacists evaluate whether you understand when to take each dose, whether it should be taken with meals, how it may interact with daily supplements, and what side effects to monitor.
               </p>
+
+              <div style={{ marginBottom: '2rem', padding: '1.25rem 1.5rem', backgroundColor: 'var(--bg-warm)', borderLeft: '3px solid var(--solis-teal)', borderRadius: '0 var(--radius-sm) var(--radius-sm) 0' }}>
+                <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, color: 'var(--solis-teal)', display: 'block', marginBottom: '0.25rem' }}>
+                  Clinical Practice Lead &bull; Hailakandi
+                </span>
+                <h4 style={{ fontSize: '1.15rem', color: 'var(--solis-navy-dark)', marginBottom: '0.35rem' }}>
+                  {siteConfig.contact.leadPharmacist.name}
+                </h4>
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: 0, lineHeight: '1.55' }}>
+                  {siteConfig.contact.leadPharmacist.bio}
+                </p>
+              </div>
 
               <div>
                 <a

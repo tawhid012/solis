@@ -22,6 +22,9 @@ export function PharmacistSection() {
           <p className="pharmacist-quote-text">
             &ldquo;{siteConfig.pharmacistCare.quote}&rdquo;
           </p>
+          <div style={{ marginBottom: '1.75rem', fontWeight: 600, color: 'var(--solis-navy-dark)', fontSize: '0.95rem' }}>
+            &mdash; {siteConfig.contact.leadPharmacist.name}, {siteConfig.contact.leadPharmacist.title}
+          </div>
 
           <p style={{ maxWidth: '780px', marginBottom: '2rem' }}>
             {siteConfig.pharmacistCare.subheading}

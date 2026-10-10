@@ -30,33 +30,86 @@ export function ContactSection() {
             <div className="contact-details-rows">
               <div className="contact-detail-row">
                 <div className="contact-detail-label">Visit Us</div>
-                <div className="contact-detail-val">{siteConfig.contact.address}</div>
-                <div className="contact-detail-sub">{siteConfig.contact.addressNote}</div>
+                <div className="contact-detail-val">
+                  <a
+                    href={siteConfig.contact.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'inherit', textDecoration: 'none' }}
+                  >
+                    {siteConfig.contact.address}, {siteConfig.contact.addressLine2}
+                  </a>
+                </div>
+                <div className="contact-detail-sub">
+                  <a
+                    href={siteConfig.contact.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--solis-teal)', textDecoration: 'none', fontWeight: 500 }}
+                  >
+                    Open in Google Maps &rarr;
+                  </a>
+                </div>
               </div>
 
               <div className="contact-detail-row">
                 <div className="contact-detail-label">Call Us</div>
                 <div className="contact-detail-val">
-                  {siteConfig.contact.phoneHref ? (
-                    <a href={`tel:${siteConfig.contact.phoneHref}`}>{siteConfig.contact.phone}</a>
-                  ) : (
-                    <span>{siteConfig.contact.phone}</span>
-                  )}
+                  <a
+                    href={`tel:${siteConfig.contact.phoneHref}`}
+                    style={{ color: 'var(--solis-navy-dark)', textDecoration: 'none' }}
+                  >
+                    {siteConfig.contact.phone}
+                  </a>
                 </div>
                 <div className="contact-detail-sub">Direct pharmacy dispensary line</div>
               </div>
 
               <div className="contact-detail-row">
                 <div className="contact-detail-label">WhatsApp</div>
-                <div className="contact-detail-val">{siteConfig.contact.whatsapp}</div>
-                <div className="contact-detail-sub">Availability confirmation channel</div>
+                <div className="contact-detail-val">
+                  <a
+                    href={siteConfig.contact.whatsappUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--solis-teal)', textDecoration: 'none' }}
+                  >
+                    {siteConfig.contact.whatsapp}
+                  </a>
+                </div>
+                <div className="contact-detail-sub">Direct message for availability &amp; inquiries</div>
+              </div>
+
+              <div className="contact-detail-row">
+                <div className="contact-detail-label">Social Media</div>
+                <div className="contact-detail-val">
+                  <a
+                    href={siteConfig.contact.socialMedia.instagram}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: 'var(--solis-navy-dark)', textDecoration: 'none' }}
+                  >
+                    {siteConfig.contact.socialMedia.handle}
+                  </a>
+                </div>
+                <div className="contact-detail-sub">Follow for clinical insights &amp; community updates</div>
+              </div>
+
+              <div className="contact-detail-row">
+                <div className="contact-detail-label">Lead Clinical Pharmacist</div>
+                <div className="contact-detail-val" style={{ fontWeight: 600 }}>
+                  {siteConfig.contact.leadPharmacist.name}
+                </div>
+                <div className="contact-detail-sub">
+                  {siteConfig.contact.leadPharmacist.title} &bull; Medication safety &amp; patient counselling
+                </div>
               </div>
 
               <div className="contact-detail-row">
                 <div className="contact-detail-label">Dispensary Hours</div>
                 <div className="contact-detail-val">{siteConfig.contact.hours.weekdays}</div>
                 <div className="contact-detail-sub">
-                  Sunday: {siteConfig.contact.hours.sunday} • Registered pharmacist on duty
+                  Sunday: {siteConfig.contact.hours.sunday} &bull; Registered pharmacist on duty
                 </div>
               </div>
             </div>

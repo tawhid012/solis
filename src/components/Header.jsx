@@ -176,8 +176,15 @@ export function Header({ currentPath, navigate }) {
             <span>Visit Solis</span>
             <ArrowRight size={15} />
           </a>
-          <div style={{ textAlign: 'center', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-            Registered clinical pharmacist on duty
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '0.65rem', marginTop: '0.85rem', fontSize: '0.85rem', flexWrap: 'wrap' }}>
+            <a href={`tel:${siteConfig.contact.phoneHref}`} style={{ color: 'var(--solis-navy-dark)', fontWeight: 600, textDecoration: 'none' }}>
+              Call: {siteConfig.contact.phone}
+            </a>
+            <span style={{ color: 'var(--divider)' }}>&bull;</span>
+            <span style={{ color: 'var(--text-secondary)' }}>{siteConfig.contact.address}</span>
+          </div>
+          <div style={{ textAlign: 'center', fontSize: '0.78rem', color: 'var(--text-muted)', marginTop: '0.35rem' }}>
+            {siteConfig.contact.leadPharmacist.name} &bull; Clinical Pharmacist on duty
           </div>
         </div>
       </div>

@@ -24,30 +24,42 @@ export const siteConfig = {
     },
   },
 
-  // Contact Information — Client Placeholders (No Fake Data)
+  // Contact Information — Official Solis Details
   contact: {
     businessName: "Solis Healthcare & Meds",
-    // Configurable placeholders clearly marked for the client
-    address: "[BUSINESS ADDRESS TO BE CONFIGURED]",
-    addressLine2: "[CITY, STATE / REGION, POSTAL CODE]",
-    addressNote: "Official pharmacy premises address will be updated upon final registration.",
+    address: "Hailakandi",
+    addressLine2: "Assam, India",
+    addressNote: "Dispensary & healthcare premises located in Hailakandi, Assam.",
     
-    phone: "[PHONE NUMBER]",
-    phoneSecondary: null,
+    phone: "+91 62812 56172",
+    phoneDisplay: "+91 62812 56172",
+    phoneHref: "+916281256172",
     
-    whatsapp: "[WHATSAPP NUMBER]",
+    whatsapp: "+91 62812 56172",
+    whatsappUrl: "https://wa.me/916281256172",
     
-    email: "[EMAIL ADDRESS]",
-    
-    hours: {
-      weekdays: "[MON – SAT: 8:00 AM – 10:00 PM]",
-      sunday: "[SUN: 9:00 AM – 8:00 PM]",
-      emergencyNotice: "Emergency prescription dispensing subject to pharmacist availability and regulations.",
-      pharmacistSchedule: "Qualified registered pharmacist on duty during all operating hours."
+    socialMedia: {
+      handle: "@montelukastman",
+      instagram: "https://instagram.com/montelukastman",
     },
     
-    googleMapsUrl: null, // Will connect directly to Google Maps when coordinates/address are provided
-    directionsNote: "Turn-by-turn directions and store location map will be linked once the physical premises address is configured.",
+    leadPharmacist: {
+      name: "Dr. Mujakkir Hussain (CP)",
+      title: "Clinical Pharmacist",
+      role: "Lead Clinical Pharmacist",
+      credentials: "CP (Clinical Pharmacist)",
+      bio: "Supervising clinical dispensing, prescription reviews, and patient counselling at Solis Healthcare & Meds.",
+    },
+
+    hours: {
+      weekdays: "Mon – Sat: 8:30 AM – 9:30 PM",
+      sunday: "Sun: 9:00 AM – 8:00 PM",
+      emergencyNotice: "Emergency prescription dispensing subject to pharmacist availability and regulations.",
+      pharmacistSchedule: "Dr. Mujakkir Hussain (CP) and registered pharmacist team on duty."
+    },
+    
+    googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Hailakandi+Assam",
+    directionsNote: "Premises located in Hailakandi, Assam. Click for map directions.",
   },
 
   // Navigation Links

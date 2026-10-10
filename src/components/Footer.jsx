@@ -48,15 +48,35 @@ export function Footer({ navigate }) {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.85rem', color: 'var(--text-inverse-muted)', fontSize: '0.925rem', lineHeight: '1.55' }}>
               <div>
                 <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.2rem' }}>Premises</strong>
-                {siteConfig.contact.address}
+                <a
+                  href={siteConfig.contact.googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: 'inherit', textDecoration: 'none' }}
+                >
+                  {siteConfig.contact.address}, {siteConfig.contact.addressLine2}
+                </a>
               </div>
               <div>
-                <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.2rem' }}>Dispensary Hours</strong>
-                {siteConfig.contact.hours.weekdays}
+                <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.2rem' }}>Clinical Lead</strong>
+                <span>{siteConfig.contact.leadPharmacist.name}</span>
               </div>
               <div>
-                <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.2rem' }}>Telephone</strong>
-                {siteConfig.contact.phone}
+                <strong style={{ color: '#FFFFFF', display: 'block', fontSize: '0.78rem', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '0.2rem' }}>Telephone &amp; WhatsApp</strong>
+                <a
+                  href={`tel:${siteConfig.contact.phoneHref}`}
+                  style={{ color: '#FFFFFF', textDecoration: 'none', display: 'block' }}
+                >
+                  {siteConfig.contact.phone}
+                </a>
+                <a
+                  href={siteConfig.contact.socialMedia.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: '#A5C4D4', textDecoration: 'none', fontSize: '0.85rem', marginTop: '0.25rem', display: 'inline-block' }}
+                >
+                  {siteConfig.contact.socialMedia.handle} &rarr;
+                </a>
               </div>
             </div>
           </div>

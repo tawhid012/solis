@@ -33,6 +33,12 @@ export function ClinicalSection({ navigate }) {
           <div className="clinical-editorial-content">
             <span className="chapter-badge">04 / Clinical Practice</span>
             <h2 className="clinical-headline">More than medicines.</h2>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.35rem 0.85rem', backgroundColor: 'var(--solis-teal-50)', border: '1px solid var(--solis-teal-100)', borderRadius: 'var(--radius-pill)', margin: '0.75rem 0 1.25rem' }}>
+              <span style={{ width: '7px', height: '7px', borderRadius: '50%', backgroundColor: 'var(--solis-teal)' }} />
+              <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--solis-navy-dark)' }}>
+                Led by {siteConfig.contact.leadPharmacist.name} &bull; {siteConfig.contact.leadPharmacist.title}
+              </span>
+            </div>
             <p className="clinical-substatement">
               Professional guidance when it matters. At Solis, professional pharmacy care goes beyond dispensing boxes — our qualified pharmacists help you understand your medicines and use them safely.
             </p>
