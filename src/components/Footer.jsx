@@ -60,7 +60,7 @@ export function Footer({ navigate }) {
                   {siteConfig.contact.address}, {siteConfig.contact.addressLine2}
                 </a>
                 <span style={{ display: 'block', fontSize: '0.8rem', color: '#8C9FA8', marginTop: '0.15rem' }}>
-                  In-person patient counselling &amp; consultation
+                  In-person patient counselling only
                 </span>
               </div>
               <div>
