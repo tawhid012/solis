@@ -89,7 +89,7 @@ export function ClinicalSupportPage({ navigate }) {
 
             <div className="catalogue-items-list" style={{ borderTop: '1px solid var(--divider)' }}>
               {siteConfig.clinicalSupport.services.map((item, idx) => (
-                <div key={item.title} className="catalogue-item-row" style={{ padding: '2rem 0' }}>
+                <div key={item.title} className="catalogue-item-row">
                   <span className="catalogue-item-num">0{idx + 1}</span>
                   <h3 className="catalogue-item-title">{item.title}</h3>
                   <p className="catalogue-item-desc">{item.description}</p>
@@ -97,7 +97,7 @@ export function ClinicalSupportPage({ navigate }) {
               ))}
             </div>
 
-            <div style={{ marginTop: '3.5rem', padding: '2rem', backgroundColor: 'var(--bg-warm)', borderLeft: '3px solid var(--solis-teal)' }}>
+            <div className="dispensing-notice-box" style={{ marginTop: '3.5rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '0.5rem' }}>
                 <AlertCircle size={18} style={{ color: 'var(--solis-teal)' }} />
                 <h4 style={{ fontSize: '0.95rem', color: 'var(--solis-navy-dark)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>

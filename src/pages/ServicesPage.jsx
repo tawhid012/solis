@@ -31,7 +31,7 @@ export function ServicesPage({ navigate }) {
       {/* Dispensing Notice */}
       <section className="section-compact section-white" style={{ paddingBottom: 0 }}>
         <div className="container">
-          <div style={{ borderLeft: '3px solid var(--solis-teal)', padding: '1.25rem 2rem', backgroundColor: 'var(--bg-warm)' }}>
+          <div className="dispensing-notice-box">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginBottom: '0.35rem' }}>
               <AlertCircle size={18} style={{ color: 'var(--solis-teal)' }} />
               <strong style={{ fontFamily: 'var(--font-display)', fontSize: '0.95rem', color: 'var(--solis-navy-dark)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>
@@ -50,22 +50,22 @@ export function ServicesPage({ navigate }) {
         <div className="container">
           <div className="catalogue-items-list" style={{ borderTop: '1px solid var(--divider)' }}>
             {siteConfig.categories.map((item) => (
-              <div key={item.id} className="catalogue-item-row" style={{ padding: '2.5rem 0' }}>
-                <span className="catalogue-item-num" style={{ fontSize: '1.35rem' }}>{item.number}</span>
-                <div>
-                  <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, color: 'var(--solis-teal)', display: 'block', marginBottom: '0.25rem' }}>
+              <div key={item.id} className="catalogue-item-row">
+                <span className="catalogue-item-num">{item.number}</span>
+                <div className="catalogue-item-header">
+                  <span className="catalogue-item-badge">
                     {item.badge}
                   </span>
-                  <h3 className="catalogue-item-title" style={{ fontSize: '1.6rem' }}>{item.title}</h3>
+                  <h3 className="catalogue-item-title">{item.title}</h3>
                 </div>
-                <div>
-                  <p className="catalogue-item-desc" style={{ fontSize: '1.05rem', marginBottom: '1rem' }}>
+                <div className="catalogue-item-body">
+                  <p className="catalogue-item-desc" style={{ marginBottom: '1rem' }}>
                     {item.description}
                   </p>
-                  <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                  <ul className="catalogue-item-highlights">
                     {item.highlights.map((highlight, idx) => (
-                      <li key={idx} style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                        <span style={{ width: '4px', height: '4px', backgroundColor: 'var(--solis-teal)', borderRadius: '50%' }} />
+                      <li key={idx}>
+                        <span className="catalogue-item-bullet" />
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -75,9 +75,9 @@ export function ServicesPage({ navigate }) {
             ))}
           </div>
 
-          <div style={{ marginTop: '4rem', padding: '3rem', backgroundColor: 'var(--bg-soft)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--divider)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+          <div className="services-inquiry-box">
             <div>
-              <h3 style={{ fontSize: '1.5rem', color: 'var(--solis-navy-dark)', marginBottom: '0.5rem' }}>
+              <h3 style={{ fontSize: '1.4rem', color: 'var(--solis-navy-dark)', marginBottom: '0.5rem' }}>
                 Have a question about medicine availability?
               </h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '1rem' }}>

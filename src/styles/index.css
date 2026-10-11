@@ -804,6 +804,71 @@ img {
   color: var(--text-secondary);
 }
 
+.catalogue-item-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalogue-item-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--solis-teal);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.catalogue-item-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.catalogue-item-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 0;
+}
+
+.catalogue-item-highlights li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  line-height: 1.45;
+}
+
+.catalogue-item-bullet {
+  width: 4px;
+  height: 4px;
+  background-color: var(--solis-teal);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dispensing-notice-box {
+  border-left: 3px solid var(--solis-teal);
+  padding: clamp(1rem, 2.5vw, 1.25rem) clamp(1rem, 3vw, 2rem);
+  background-color: var(--bg-warm);
+}
+
+.services-inquiry-box {
+  margin-top: clamp(2.5rem, 5vw, 4rem);
+  padding: clamp(1.5rem, 3.5vw, 3rem);
+  background-color: var(--bg-soft);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--divider);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+}
+
 /* ==========================================================================
    5. WHY SOLIS — LARGE NUMBER PRINCIPLES
    ========================================================================== */
@@ -1364,12 +1429,14 @@ img {
 
   /* Services Catalogue: Compact vertical list on phones */
   .catalogue-item-row {
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 36px 1fr;
     gap: 0.5rem 1rem;
     padding: 1.35rem 0;
   }
 
-  .catalogue-item-desc {
+  .catalogue-item-desc,
+  .catalogue-item-body,
+  .catalogue-item-row > :nth-child(3) {
     grid-column: 2 / -1;
   }
 
@@ -1476,6 +1543,34 @@ img {
 
 /* Small Phones (max-width: 480px / 320px–430px) */
 @media (max-width: 480px) {
+  .catalogue-item-row {
+    grid-template-columns: 32px 1fr;
+    gap: 0.4rem 0.75rem;
+    padding: 1.15rem 0;
+  }
+
+  .catalogue-item-num {
+    font-size: 1.05rem;
+  }
+
+  .catalogue-item-title {
+    font-size: 1.3rem;
+  }
+
+  .catalogue-item-desc {
+    font-size: 0.925rem;
+  }
+
+  .services-inquiry-box {
+    padding: 1.5rem 1.15rem;
+    gap: 1.25rem;
+  }
+
+  .services-inquiry-box .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   .hero-editorial-ctas {
     flex-direction: column;
     width: 100%;
